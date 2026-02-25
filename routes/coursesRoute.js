@@ -1,15 +1,15 @@
 const express = require('express');
 const router= express.Router();
-const teachersController = require('../controllers/teachersController');
+const coursesController = require('../controllers/coursesController');
 
 //getAll
-router.get(('/'), teachersController.readAll);
-router.post('/', teachersController.post);
+router.get(('/'), coursesController.readAll);
+router.post('/', coursesController.post);
 router.route("/:id")
-  .get(teachersController.readOne)
-  .put(teachersController.update)
-  .delete(teachersController.delete)
-  .patch(teachersController.patch);
+  .get(coursesController.readOne)
+  .put(coursesController.update)
+  .delete(coursesController.delete)
+  .patch(coursesController.patch);
 //getOne
 
 module.exports = router;
